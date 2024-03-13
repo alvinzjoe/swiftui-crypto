@@ -19,7 +19,6 @@ struct HomeView: View {
                 .sheet(isPresented: $showPortfolioView, content: {
                     PortfolioView()
                         .environmentObject(vm)
-                    // sheet is on new environment
                 })
             
             VStack {
