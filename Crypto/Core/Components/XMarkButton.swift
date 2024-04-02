@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct XMarkButton: View {
-    @Environment(\.presentationMode) var presentationMode
+//    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         Image(systemName: "xmark")
             .foregroundStyle(Color.theme.accent)
-            .onTapGesture {
-                presentationMode.wrappedValue.dismiss()
-            }
+ 
     }
 }
 

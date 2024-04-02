@@ -14,6 +14,8 @@ struct PortfolioView: View {
     @State private var qtyText: String = ""
     @State private var showCheckmark: Bool = false
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -53,6 +55,10 @@ struct PortfolioView: View {
             .toolbar(content: {
                 ToolbarItem(placement: .topBarLeading) {
                    XMarkButton()
+                        .onTapGesture {
+                            vm.searchText = ""
+                            presentationMode.wrappedValue.dismiss()
+                        }
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {

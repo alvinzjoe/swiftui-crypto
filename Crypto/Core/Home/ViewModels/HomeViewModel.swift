@@ -29,11 +29,6 @@ class HomeViewModel: ObservableObject {
     }
     
     func addSubscribers() {
-//        dataService.$allCoins
-//            .sink { [weak self] (returnedCoins) in
-//                self?.allCoins = returnedCoins
-//            }
-//            .store(in: &cancellables)
         
         // update allCoins
         $searchText

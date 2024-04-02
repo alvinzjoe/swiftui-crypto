@@ -31,6 +31,7 @@ struct HomeView: View {
                 if !showPortfolio {
                     allCoinsList
                     .transition(.move(edge: .leading))
+                    
                 }
                 if showPortfolio {
                     allPortfolioList
@@ -39,6 +40,7 @@ struct HomeView: View {
                 
                 Spacer()
             }
+            //.ignoresSafeArea(.all)
         }
     }
 }
